@@ -6,3 +6,4 @@ do
     echo "Best School"
     x=$((x+1))
 done
+
