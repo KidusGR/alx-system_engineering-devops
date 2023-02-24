@@ -1,2 +1,3 @@
 #!/bin/bash
-paste -- | cut -f1
+cat -n | cut -b 6- | grep ^[13579] | cut -f2
+
