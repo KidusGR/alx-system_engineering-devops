@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Configures a new Ubuntu server with a custom HTTP header response
+# Configures a new Ubuntu server with a custom HTTP header response 'X-Served-By'
+
 apt-get -y update
 apt-get install -y nginx
 
