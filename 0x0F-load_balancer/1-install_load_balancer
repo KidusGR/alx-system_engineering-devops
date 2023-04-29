@@ -33,8 +33,7 @@ listen hbnb
     stats enable
     stats uri /haproxy?stats
     balance roundrobin
-    option httpclose
-    option forwardfor
+    option http-keep-alive
     server 39159-web-01 54.152.232.124:80 check
     server 39159-web-02 34.202.157.225:80 check
 " >> /etc/haproxy/haproxy.cfg
