@@ -2,9 +2,9 @@
 # Installs HAProxy version 2.4 with the following configurations:
 
 apt-get install -y software-properties-common
-add-apt-repository -y ppa:vbernat/haproxy-2.4
+add-apt-repository -y ppa:vbernat/haproxy-2.6
 apt-get update
-apt-get install -y haproxy=2.4.\*
+apt-get install -y haproxy=2.6.\*
 
 echo "ENABLED=1" >> /etc/default/haproxy
 mv /etc/haproxy/haproxy.cfg{,.original}
@@ -23,6 +23,7 @@ defaults
     option  dontlognull
     retries 3
     option redispatch
+    option http-keep-alive
     timeout connect  5000
     timeout client  10000
     timeout server  10000
