@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Installs HAProxy version 2.4 with the following configurations:
+# Installs HAProxy version 2.6 with the following configurations:
 
 apt-get install -y software-properties-common
 add-apt-repository -y ppa:vbernat/haproxy-2.6
@@ -24,9 +24,9 @@ defaults
     retries 3
     option redispatch
     option http-keep-alive
-    timeout connect  5000
-    timeout client  10000
-    timeout server  10000
+    timeout connect  30
+    timeout client  30
+    timeout server  30
 
 listen hbnb
     bind 0.0.0.0:80
