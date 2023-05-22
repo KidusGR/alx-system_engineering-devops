@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""A script that exports a to-do list information of all employees to JSON format."""
+"""
+A script that exports a to-do list information
+of all employees to JSON format.
+"""
 import json
 import requests
 
