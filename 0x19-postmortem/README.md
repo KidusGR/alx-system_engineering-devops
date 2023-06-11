@@ -1,7 +1,7 @@
 ## Postmortem
 
 - Upon the release of `ALX School’s System Engineering & Dev Ops project 0x19-postmortem`, an outage occurred on an isolated `Ubuntu 14.04` container running an Apache web server. GET requests on the server led to 500 Internal Server Error's, when the expected response was an HTML file defining a simple Holberton WordPress site .
-![alt text](https://github.com/KidusGR/alx-system_engineering-devops/blob/master/screen.png?raw=true)
+![alt text](https://github.com/KidusGR/alx-system_engineering-devops/blob/master/screen.png)
 ## Debugging Process
 - 1 : Checked running processes using ps aux. Two apache2 processes - root and www-data - were properly running.
 
