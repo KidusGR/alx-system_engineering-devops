@@ -5,7 +5,7 @@ PID=$(pgrep gunicorn)
 
 if [ -n "$PID" ]; then
 	echo "Killing process $PID"
-	kill $PID
+	kill "$PID"
 else
 	echo "Process not found"
 fi
