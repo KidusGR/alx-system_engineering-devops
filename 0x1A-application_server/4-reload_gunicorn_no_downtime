@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-# Find the PID of the Gunicorn master process
-PID=$(pgrep gunicorn)
+# Find the process ID of the process we want to kill
+PID=$(ps auxf | grep myprocess | grep -v grep | awk '{print $2}')
 
-# If the master process is running, gracefully reload it
+# If the process ID was found, kill the process
 if [ -n "$PID" ]; then
-    echo "Reloading Gunicorn gracefully"
+    echo "Killing process $PID"
     kill -HUP "$PID"
 else
-    echo "Gunicorn is not running"
+    echo "Process not found"
 fi
 
